@@ -1,0 +1,21 @@
+# CGNN Project - Phase 3 Configuration
+# =====================================
+
+pc_algorithm:
+  alpha: 0.05                # Significance level for independence tests
+  max_cond_vars: 3          # Maximum conditioning variables
+  method: 'fisherz'         # Independence test method (fisherz, chi2, kci)
+  
+validation:
+  bootstrap_samples: 100    # Number of bootstrap samples for validation
+  confidence_level: 0.95    # Confidence level for validation
+  
+output:
+  save_graphs: true         # Save causal graphs to disk
+  create_visualizations: true # Create graph visualizations
+  
+# Alternative methods to try
+alternative_methods:
+  granger_causality: false  # Enable Granger causality analysis
+  constraint_based: true    # Use constraint-based methods
+  score_based: false       # Enable score-based causal discovery

@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data files (too large for GitHub)
+data/raw/*.csv
+data/raw/*.xlsx
+*.csv
+!data/processed/causal_variables_small.csv
+!data/processed/causal_variables_truly_balanced.csv
+!data/causal_graphs/causal_relationships.csv
+
+# Model files (too large)
+*.pt
+*.pth
+*.h5
+*.pkl
+data/neural_models/checkpoints/*.pt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+data/neural_models/logs/*.csv
+
+# Results (keep only key outputs)
+results/*/plots/*.png
+!results/phase4/plots/confusion_matrix.png
+!results/phase4/plots/class_distribution.png
+
+# Temporary
+*.tmp
+*.bak
+~*

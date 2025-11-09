@@ -1,0 +1,55 @@
+{
+  "validated_relationships": [
+    {
+      "cause": "is_weekend",
+      "effect": "day_of_week",
+      "strength": 1.0,
+      "type": "causal",
+      "validation": {
+        "is_valid": true,
+        "correlation": 0.7889880087596226,
+        "p_value": 0.0,
+        "effect_size": 2.0,
+        "direction_score": 0.49895722447734464,
+        "strength": 0.7889880087596226,
+        "significance_level": 0.050000000000000044
+      }
+    },
+    {
+      "cause": "visibility_score",
+      "effect": "weather_severity_index",
+      "strength": 1.0,
+      "type": "causal",
+      "validation": {
+        "is_valid": true,
+        "correlation": -0.7159700773705708,
+        "p_value": 0.0,
+        "effect_size": 2.0,
+        "direction_score": NaN,
+        "strength": 0.7159700773705708,
+        "significance_level": 0.050000000000000044
+      }
+    }
+  ],
+  "validation_statistics": {
+    "total_relationships": 40,
+    "validated_count": 2,
+    "rejected_count": 38,
+    "weak_evidence": 0,
+    "bootstrap_stability": [
+      {
+        "relationship": "day_of_week -> temp_avg",
+        "stability_score": 0.6240055989627615,
+        "correlation_mean": -0.06431845890105738,
+        "correlation_std": 0.038861428698748264
+      },
+      {
+        "relationship": "day_of_week -> precipitation",
+        "stability_score": 0.4982692949964258,
+        "correlation_mean": -0.030388934473231925,
+        "correlation_std": 0.04419363684455456
+      }
+    ]
+  },
+  "validated_count": 2
+}

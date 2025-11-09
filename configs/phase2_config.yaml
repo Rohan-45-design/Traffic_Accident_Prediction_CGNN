@@ -1,0 +1,35 @@
+# Phase 2 Configuration for CGNN Project
+
+data_sources:
+  primary_dataset: "data/raw/global_road_accidents.csv"
+  weather_api: "https://archive-api.open-meteo.com/v1/era5"
+  
+processing_settings:
+  sample_size_for_testing: 1000  # Remove for full dataset
+  weather_api_delay: 0.1  # Seconds between API calls
+  max_retries: 3
+  
+feature_engineering:
+  temporal_features:
+    - hour_of_day
+    - day_of_week  
+    - season
+    - is_weekend
+    - rush_hour
+  
+  weather_features:
+    - temp_avg
+    - precipitation
+    - wind_speed
+    - visibility_score
+    - weather_severity_index
+  
+  spatial_features:
+    - location_cluster
+    - distance_from_center
+
+output_files:
+  cleaned_data: "data/processed/cleaned_accidents.csv"
+  weather_data: "data/raw/weather_data.csv"
+  engineered_features: "data/processed/feature_engineered.csv"
+  causal_variables: "data/processed/causal_variables.csv"
