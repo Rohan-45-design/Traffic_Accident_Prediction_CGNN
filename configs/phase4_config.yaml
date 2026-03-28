@@ -17,7 +17,7 @@ data:
 model:
   input_dim: 6
   hidden_dim: 64              # ✅ Good for 5K samples
-  output_dim: 2
+  output_dim: 3
   num_layers: 5               # ✅ Good depth
   num_attention_heads: 8     # ✅ FIXED (was 8)
   attention_dropout: 0.3
