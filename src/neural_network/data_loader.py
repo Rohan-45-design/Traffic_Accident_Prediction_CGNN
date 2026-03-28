@@ -127,8 +127,7 @@ class CGNNDataLoader:
         
         df, edges_df = self.load_data()
         
-        # Separate features and target
-        target_col = 'Accident_Severity'
+        target_col = 'Accident Severity'
         if target_col not in df.columns:
             raise ValueError(f"Target column '{target_col}' not found!")
         

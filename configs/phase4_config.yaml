@@ -1,13 +1,11 @@
 # CGNN Configuration - Phase 4
-# Optimized for 5K samples
-
 project:
   name: "Traffic_Accident_CGNN"
   version: "1.0"
   description: "Causal Graph Neural Network for Accident Prediction"
 
 data:
-  causal_variables: "data/processed/causal_variables_small.csv"
+  causal_variables: "data/processed/causal_variables_full_features.csv"
   causal_relationships: "data/causal_graphs/causal_relationships.csv"
   train_split: 0.7
   val_split: 0.15
@@ -15,11 +13,11 @@ data:
   random_seed: 42
 
 model:
-  input_dim: 6
-  hidden_dim: 64              # ✅ Good for 5K samples
+  input_dim: 20
+  hidden_dim: 64              
   output_dim: 3
-  num_layers: 5               # ✅ Good depth
-  num_attention_heads: 8     # ✅ FIXED (was 8)
+  num_layers: 6              # ✅ Good depth
+  num_attention_heads: 4      # ✅ FIXED (was 8)
   attention_dropout: 0.3
   message_passing_steps: 2    # ✅ FIXED (was 3)
   aggregation: "mean"
@@ -29,8 +27,8 @@ model:
 
 training:
   batch_size: 32
-  num_epochs: 20              # ✅ Good
-  learning_rate: 0.01        # ✅ Good (was 0.01)
+  num_epochs: 20             
+  learning_rate: 0.003        
   weight_decay: 0.0001
   optimizer: "Adam"
   scheduler: "ReduceLROnPlateau"

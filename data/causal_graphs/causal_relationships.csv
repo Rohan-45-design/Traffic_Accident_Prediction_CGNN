@@ -39,3 +39,32 @@ distance_from_center,temp_avg,1.0,causal
 distance_from_center,precipitation,1.0,causal
 distance_from_center,wind_speed,1.0,causal
 distance_from_center,weather_severity_index,1.0,causal
+Day of Week,Time of Day,1.0,causal
+Day of Week,Traffic Volume,1.0,causal
+Day of Week,Accident Severity,1.0,causal
+Time of Day,Traffic Volume,1.0,causal
+Time of Day,Accident Severity,1.0,causal
+Urban/Rural,Road Type,1.0,causal
+Urban/Rural,Traffic Volume,1.0,causal
+Urban/Rural,Accident Severity,1.0,causal
+Road Type,Speed Limit,1.0,causal
+Road Type,Accident Severity,1.0,causal
+Weather Conditions,Visibility Level,1.0,causal
+Weather Conditions,Road Condition,1.0,causal
+Weather Conditions,Accident Severity,1.0,causal
+Visibility Level,Accident Severity,1.0,causal
+Number of Vehicles Involved,Accident Severity,1.0,causal
+Speed Limit,Accident Severity,1.0,causal
+Driver Age Group,Accident Severity,1.0,causal
+Driver Gender,Accident Severity,1.0,causal
+Driver Alcohol Level,Accident Severity,1.0,causal
+Driver Fatigue,Accident Severity,1.0,causal
+Vehicle Condition,Accident Severity,1.0,causal
+Pedestrians Involved,Accident Severity,1.0,causal
+Cyclists Involved,Accident Severity,1.0,causal
+Emergency Response Time,Accident Severity,1.0,causal
+Traffic Volume,Accident Severity,1.0,causal
+Road Condition,Accident Severity,1.0,causal
+Accident Cause,Accident Severity,1.0,causal
+Population Density,Traffic Volume,1.0,causal
+Population Density,Accident Severity,1.0,causal
