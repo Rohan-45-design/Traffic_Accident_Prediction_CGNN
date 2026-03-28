@@ -7,7 +7,7 @@ project:
   description: "Causal Graph Neural Network for Accident Prediction"
 
 data:
-  causal_variables: "data/processed/causal_variables_balanced_5k.csv"
+  causal_variables: "data/processed/causal_variables_small.csv"
   causal_relationships: "data/causal_graphs/causal_relationships.csv"
   train_split: 0.7
   val_split: 0.15
@@ -30,7 +30,7 @@ model:
 training:
   batch_size: 32
   num_epochs: 20              # ✅ Good
-  learning_rate: 0.003        # ✅ Good (was 0.01)
+  learning_rate: 0.01        # ✅ Good (was 0.01)
   weight_decay: 0.0001
   optimizer: "Adam"
   scheduler: "ReduceLROnPlateau"
